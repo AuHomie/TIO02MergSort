@@ -11,34 +11,27 @@ using std::endl;
 using std::string;
 
 
- template <typename T> 
+template <typename T> 
 class MergeSort : public BaseSort {
 
-    MergeSort(const unsigned int capacity) : BaseSort<T>("Two-Way Merge", capacity){};
     public: 
+    MergeSort(const unsigned int capacity) : BaseSort<T>("Two-Way Merge", capacity){};
 
-    void runSort()
-    if (runSort[0] != 0)
-    runSort[0] = 0, runSort[this-> capacity - 1] == this-> capacity;
+    void runSort(){
+    runSort(0,this-> capacity)
+    };
 
     private:
 
-    void runSort(const unsigned int firstIndex, cosnt unsigned int lastIndex)
-    ;
+    void runSort(const unsigned int firstIndex, const unsigned int lastIndex)
+    if (runSort[] != 0)
+    if (runSort[this->lastIndex]  ) ;
 
 
-}
+};
 
 
 /* 
-DONE class MergeSort: The class should inherit the BaseSort class and be templated like the other derived classes.
-
-DONE MergeSort(const unsigned int capacity): Add a constructor which accepts a capacity.  Call the BaseSort constructor, 
-with the first argument containing the description "Two-Way Merge", and the second passing in the capacity.  
-See the other classes for the pattern to follow.  Add a {} at the end to indicate that this constructor's body is defined here and has no additional logic.
-
-public - void runSort():  The purpose of this method is to simply get the recursion started by calling the private runSort() method. 
- Thus, the body of this method needs only one line of code: a call to runSort(), passing in 0 for the first index, and this->capacity for the last index.
 
 private - void runSort(const unsigned int firstIndex, const unsigned int lastIndex): This method is the core of the sorting algorithm,
  which will be described in more detail below.  Overall, every call to this runSort() method processes the array region between firstIndex and lastIndex.
@@ -114,4 +107,14 @@ while the right index is less than the right array size
     increment the right index
     increment the arr index
 Almost done.  Just reclaim the two dynamic arrays with delete[] leftArray; and delete[] rightArray;.
+
+DONE class MergeSort: The class should inherit the BaseSort class and be templated like the other derived classes.
+
+DONE MergeSort(const unsigned int capacity): Add a constructor which accepts a capacity.  Call the BaseSort constructor, 
+with the first argument containing the description "Two-Way Merge", and the second passing in the capacity.  
+See the other classes for the pattern to follow.  Add a {} at the end to indicate that this constructor's body is defined here and has no additional logic.
+
+Done public - void runSort():  The purpose of this method is to simply get the recursion started by calling the private runSort() method. 
+ Thus, the body of this method needs only one line of code: a call to runSort(), passing in 0 for the first index, and this->capacity for the last index.
+
 */

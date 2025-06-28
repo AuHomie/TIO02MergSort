@@ -11,22 +11,29 @@ using std::endl;
 using std::string;
 
 
-template <typename T> 
+ template <typename T> 
 class MergeSort : public BaseSort {
 
-    MergeSort (const unsigned int capacity): BaseSort(capacity){
-        
+    MergeSort(const unsigned int capacity) : BaseSort<T>("Two-Way Merge", capacity){};
+    public: 
 
-    };
+    void runSort()
+    if (runSort[0] != 0)
+    runSort[0] = 0, runSort[this-> capacity - 1] == this-> capacity;
 
+    private:
 
+    void runSort(const unsigned int firstIndex, cosnt unsigned int lastIndex)
+    ;
 
 
 }
-/* 
-DONEclass MergeSort: The class should inherit the BaseSort class and be templated like the other derived classes.
 
-MergeSort(const unsigned int capacity): Add a constructor which accepts a capacity.  Call the BaseSort constructor, 
+
+/* 
+DONE class MergeSort: The class should inherit the BaseSort class and be templated like the other derived classes.
+
+DONE MergeSort(const unsigned int capacity): Add a constructor which accepts a capacity.  Call the BaseSort constructor, 
 with the first argument containing the description "Two-Way Merge", and the second passing in the capacity.  
 See the other classes for the pattern to follow.  Add a {} at the end to indicate that this constructor's body is defined here and has no additional logic.
 

@@ -32,8 +32,6 @@ class MergeSort : public BaseSort {
         runSort(newA1);
         runSort(newA2);
         runSort(newA1, newA2);
-        
-
 
 
     }

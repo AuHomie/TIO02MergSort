@@ -25,13 +25,25 @@ class MergeSort : public BaseSort {
 
     void runSort(const unsigned int firstIndex, const unsigned int lastIndex){
         if (lastIndex - firstIndex < 2) return;
+
         unsigned int middleIndex;
+
         middleIndex = (firstIndex + lastIndex) / 2 ;
-       int newA1[] = runSort(firstIndex, middleIndex);
-        int newA2[] = runSort(middleIndex, lastIndex);
-        runSort(newA1);
-        runSort(newA2);
-        runSort(newA1, newA2);
+
+        unsigned int rightSide(lastIndex - middleIndex);
+        unsigned int leftSide(middleIndex - firstIndex);
+
+        T* leftArray = new T[leftSide];
+        T* rightArray = new T[rightSide];
+
+        for (int i = 0, i < leftArray, i ++ ){
+            leftArray[i] = this->arr[firstIndex + i];
+        }
+        for (int i = 0, i < rightArray, i ++){
+            rightArray[i] = this->arr[middleIndex + i];
+        }
+        
+
 
 
     }

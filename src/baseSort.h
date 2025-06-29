@@ -23,9 +23,20 @@ class MergeSort : public BaseSort {
 
     private:
 
-    void runSort(const unsigned int firstIndex, const unsigned int lastIndex)
-    if (runSort[] != 0)
-    if (runSort[this->lastIndex]  ) ;
+    void runSort(const unsigned int firstIndex, const unsigned int lastIndex){
+        if (lastIndex - firstIndex < 2) return;
+        unsigned int middleIndex;
+        middleIndex = (firstIndex + lastIndex) / 2 ;
+       int newA1[] = runSort(firstIndex, middleIndex);
+        int newA2[] = runSort(middleIndex, lastIndex);
+        runSort(newA1);
+        runSort(newA2);
+        runSort(newA1, newA2);
+        
+
+
+
+    }
 
 
 };
@@ -40,8 +51,8 @@ private - void runSort(const unsigned int firstIndex, const unsigned int lastInd
 1) A base case to determine if the recursion should stop.
 2) Determine where to split the array region into two halves, either of equal size (for even sized regions) or 
 with a size different only by one (for odd sized regions).
-
 3) Recursively calls each runSort() on each half of the array region.
+
 4) Merging together the two sorted array region halves by
   4a) copying each array half into a temporary arrays and
   4b) sorting the each half back into the original array. 

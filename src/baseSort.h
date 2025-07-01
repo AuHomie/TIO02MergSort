@@ -4,7 +4,6 @@
 #include <string>
 #include <chrono>
 
-
 using std::cout;
 using std::cin;
 using std::endl;

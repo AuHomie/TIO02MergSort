@@ -18,8 +18,8 @@ class MergeSort : public BaseSort {
     MergeSort(const unsigned int capacity) : BaseSort<T>("Two-Way Merge", capacity){};
 
     void runSort(){
-    runSort(0,this-> capacity)
-    };
+    runSort(0,this-> capacity);
+    }
 
     private:
 
@@ -29,7 +29,7 @@ class MergeSort : public BaseSort {
         unsigned int middleIndex;
 
         middleIndex = (firstIndex + lastIndex) / 2 ;
-        
+
         runSort(firstIndex, middleIndex);
         runSort(middleIndex, lastIndex);    
 

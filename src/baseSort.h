@@ -71,7 +71,6 @@ class MergeSort : public BaseSort {
        delete[] rightArray;
     }
 
-
 };
 
 

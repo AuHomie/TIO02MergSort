@@ -4,6 +4,8 @@
 #include <string>
 #include <chrono>
 
+#include "baseSort.h"
+
 using std::cout;
 using std::cin;
 using std::endl;
@@ -277,7 +279,7 @@ int main() {
 	runMySort(Insertion<unsigned int>(20000));
 	runMySort(Quick<unsigned int>(20000));
 	runMySort(Heap<unsigned int>(20000));
-	runMySort(Merge<unsigned int>(20000));
+	runMySort(MergeSort<unsigned int>(20000));
 
 	cin.get();
 	return 0;

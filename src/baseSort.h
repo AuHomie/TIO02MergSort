@@ -36,16 +36,29 @@ class MergeSort : public BaseSort {
         T* leftArray = new T[leftSide];
         T* rightArray = new T[rightSide];
 
-        for (int i = 0, i < leftArray, i ++ ){
+        for (unsigned int  i = 0; i < leftSide; i++ ){
             leftArray[i] = this->arr[firstIndex + i];
         }
-        for (int i = 0, i < rightArray, i ++){
+        for (unsigned int  i = 0; i < rightSide; i++){
             rightArray[i] = this->arr[middleIndex + i];
         }
         
+        unsigned int leftIndex = 0;
+        unsigned int rightIndex = 0;
+        unsigned int arrIndex = firstIndex;
 
 
+       while (leftIndex < leftSide && rightIndex < rightSide) {
 
+            if (leftArray[leftIndex] <= rightArray[rightIndex]) {
+                this->arr[arrIndex++] = leftArray[leftIndex++];
+            } else {
+                this->arr[arrIndex++] = rightArray[rightIndex++];
+            }
+        }
+
+       delete[] leftArray;
+       delete[] rightArray;
     }
 
 
@@ -62,10 +75,10 @@ private - void runSort(const unsigned int firstIndex, const unsigned int lastInd
 2) Determine where to split the array region into two halves, either of equal size (for even sized regions) or 
 with a size different only by one (for odd sized regions).
 3) Recursively calls each runSort() on each half of the array region.
-
 4) Merging together the two sorted array region halves by
   4a) copying each array half into a temporary arrays and
   4b) sorting the each half back into the original array. 
+
 A full description is below:
 1) The base case: Verify that the array region is at least two items large, as arrays of size 1 are sorted by definition,
  and sizes smaller than 1 shouldn't be processed.  Thus, the if statement logic should be:

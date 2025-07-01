@@ -29,6 +29,9 @@ class MergeSort : public BaseSort {
         unsigned int middleIndex;
 
         middleIndex = (firstIndex + lastIndex) / 2 ;
+        
+        runSort(firstIndex, middleIndex);
+        runSort(middleIndex, lastIndex);    
 
         unsigned int rightSide(lastIndex - middleIndex);
         unsigned int leftSide(middleIndex - firstIndex);
